@@ -5,7 +5,7 @@ RUN apk add --no-cache $PHPIZE_DEPS \
     imagemagick-dev icu-dev zlib-dev jpeg-dev libpng-dev libpq-dev libzip-dev postgresql-dev libgomp linux-headers; \
     docker-php-ext-configure gd --with-jpeg; \
     docker-php-ext-configure pgsql -with-pgsql=/usr/local/pgsql; \
-    docker-php-ext-install intl pcntl gd exif zip mysqli pgsql pdo pdo_mysql pdo_pgsql bcmath; \
+    docker-php-ext-install intl pcntl gd exif zip mysqli pgsql pdo pdo_mysql pdo_pgsql bcmath opcache; \
     # { Xdebug workaround
     # --------------------------------
     # pecl install xdebug; \
