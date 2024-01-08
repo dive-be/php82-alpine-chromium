@@ -16,7 +16,7 @@ RUN apk add --no-cache $PHPIZE_DEPS \
     apk del $PHPIZE_DEPS; \
     rm -rf /tmp/pear;
 
-# Install other dependencies
+# Install other dependencies, including Chromium
 RUN apk add --no-cache git curl sqlite \
-nodejs npm mariadb-client postgresql-client ncdu openssh-client; \
-npm install --global yarn;
+chromium chromium-chromedriver \
+nodejs npm mariadb-client postgresql-client ncdu openssh-client;
