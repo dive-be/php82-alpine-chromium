@@ -1,20 +1,20 @@
-# php82-alpine
+# php82-alpine-chromium
 
 ## What is this?
 
-This is a custom build based on PHP 8.2's Alpine docker image, with changes to make Laravel back-end testing easily possible.
+This is a custom build based on PHP 8.2's Alpine docker image, with changes to make front-end and back-end testing as easy as possible.
 
 ## Quick start
 
 In order to build and then test the container:
 
-    docker buildx build . -t diveinteractive/php82-alpine \
-    && docker run -it diveinteractive/php82-alpine sh
+    docker buildx build . -t diveinteractive/php82-alpine-chromium \
+    && docker run -it diveinteractive/php82-alpine-chromium sh
 
 To make an Intel-compatible build on M1, provide the `--platform` flag, but beware that this is slow:
 
-    docker buildx build . --platform linux/amd64 -t diveinteractive/php82-alpine \
-    && docker run -it diveinteractive/php82-alpine sh
+    docker buildx build . --platform linux/amd64 -t diveinteractive/php82-alpine-chromium \
+    && docker run -it diveinteractive/php82-alpine-chromium sh
 
 ## Automatic builds
 
@@ -27,4 +27,4 @@ The Docker action will automatically build the release and push it under that ta
 
 ## Where can I find it?
 
-You can find the image on Docker Hub here: https://hub.docker.com/r/diveinteractive/php82-alpine.
+You can find the image on Docker Hub here: https://hub.docker.com/r/diveinteractive/php82-alpine-chromium.
