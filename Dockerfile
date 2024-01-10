@@ -18,5 +18,5 @@ RUN apk add --no-cache $PHPIZE_DEPS \
 
 # Install other dependencies, including Chromium
 RUN apk add --no-cache git curl sqlite \
-chromium chromium-chromedriver \
+chromium chromium-chromedriver xvfb dbus \
 nodejs npm mariadb-client postgresql-client ncdu openssh-client;
