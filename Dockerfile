@@ -20,3 +20,6 @@ RUN apk add --no-cache $PHPIZE_DEPS \
 RUN apk add --no-cache git curl sqlite \
 chromium chromium-chromedriver xvfb dbus \
 nodejs npm mariadb-client postgresql-client ncdu openssh-client;
+
+# Enable xvfb
+RUN systemctl enable xvfb;
