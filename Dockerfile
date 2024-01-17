@@ -17,6 +17,6 @@ RUN apk add --no-cache $PHPIZE_DEPS \
     rm -rf /tmp/pear;
 
 # Install other dependencies, including Chromium
-RUN apk add --no-cache git curl sqlite \
+RUN apk add --no-cache patch git curl sqlite \
 chromium chromium-chromedriver xvfb dbus \
 nodejs npm mariadb-client postgresql-client ncdu openssh-client;
